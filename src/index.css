@@ -6,3 +6,11 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
+.skewed {
+  height: 100%; /* Set the height to 100% so it covers the entire parent div */
+  display: flex; /* Use flexbox to align the rating and text */
+  align-items: center; /* Vertically center the rating and text */
+  justify-content: flex-end; /* Align the rating to the right edge */
+  transform: skewX(-20deg); /* Apply a horizontal skew transformation */
+  transform-origin: 100% 0%; /* Set the transform origin to the top right corner */
+}

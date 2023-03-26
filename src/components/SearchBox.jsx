@@ -1,4 +1,9 @@
-export default function SearchBox() {
+export default function SearchBox({ handleSearch }) {
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSearch(event.target.value);
+    }
+  };
   return (
     <div class="flex justify-center mt-4">
       <div class="mb-3 sm:w-[80%] md:w-[60%] lg:w-[40%]">
@@ -9,16 +14,8 @@ export default function SearchBox() {
             placeholder="Search"
             aria-label="Search"
             aria-describedby="button-addon1"
+            onKeyDown={handleKeyPress}
           />
-          {/*    <button
-          class="relative z-[2] flex items-center rounded-r bg-[#211E27] border border-solid border-gray-600 border-l-0 px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
-          type="button"
-          id="button-addon1"
-          data-te-ripple-init
-          data-te-ripple-color="light"
-        >
-          <AiOutlineSearch size={22} />
-        </button> */}
         </div>
       </div>
     </div>
