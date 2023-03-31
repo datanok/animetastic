@@ -70,7 +70,7 @@ export default function Search() {
       {loading ? (
         <Spinner />
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full sm:w-11/12 lg:w-4/5 xl:w-3/4 mx-auto justify-items-center pb-9">
+        <div className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 justify-items-center justify-center gap-y-14 gap-x-14 mt-10 mb-5 px-2">
           <Results results={state.results} />
         </div>
       )}

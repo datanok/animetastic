@@ -6,7 +6,7 @@ export default function SearchBox({ handleSearch }) {
   };
   return (
     <div class="flex justify-center mt-4">
-      <div class="mb-3 sm:w-[80%] md:w-[60%] lg:w-[40%]">
+      <div class="mb-3 w-[80%] md:w-[60%] lg:w-[40%]">
         <div class="relative mb-4 flex w-full flex-wrap items-stretch">
           <input
             type="search"

@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 body {
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  background-color: #111827;
 }
 .skewed {
   height: 100%; /* Set the height to 100% so it covers the entire parent div */
@@ -13,4 +12,9 @@ body {
   justify-content: flex-end; /* Align the rating to the right edge */
   transform: skewX(-20deg); /* Apply a horizontal skew transformation */
   transform-origin: 100% 0%; /* Set the transform origin to the top right corner */
+}
+.bg-blur {
+  backdrop-filter: blur(
+    10px
+  ); /* adjust the value to control the amount of blur */
 }
