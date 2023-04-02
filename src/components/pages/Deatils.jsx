@@ -1,8 +1,17 @@
 import axios from "axios";
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
+import { BiArrowBack } from "react-icons/bi";
 
 export default function Details() {
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const searchQuery = searchParams.get("searchQuery");
+  const goBack = () => {
+    navigate(`/search?id=${searchQuery}`);
+  };
   const { id } = useParams();
   const [anime, setAnime] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -36,8 +45,11 @@ export default function Details() {
   }
 
   return (
-    <div className="bg-hero bg-no-repeat bg-cover bg-center bg-fixed backdrop-blur-lg bg-white/30 bg-[url('https://images6.alphacoders.com/112/1120777.jpg')]">
-      <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-3 gap-2 md:gap-0 bg-black backdrop-filter backdrop-blur-xl bg-opacity-10 w-full">
+    <div className="bg-hero bg-no-repeat bg-cover bg-center bg-fixed backdrop-blur-lg bg-white/30 bg-[url('https://images8.alphacoders.com/632/632051.png')]">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-0 bg-black backdrop-filter backdrop-blur-xl bg-opacity-10 w-full">
+        <button className="absolute text-white m-4" onClick={() => goBack()}>
+          <BiArrowBack size={24} />
+        </button>
         <div className=" h-fit my-2 md:col-span-1 mx-auto">
           <img
             src={anime?.images.jpg.large_image_url}
@@ -64,7 +76,7 @@ export default function Details() {
                   {anime?.rating}
                 </li>
                 <li className="inline-flex items-center text-base font-medium text-gray-300 ">
-                  {anime?.episodes}
+                  {anime?.episodes} Episodes
                 </li>
               </ol>
             </nav>
@@ -75,7 +87,7 @@ export default function Details() {
             </div>
           </div>
         </div>
-        <div className="h-fit md:col-span-3 lg:col-span-1 my-2 mx-2 rounded-md bg-black bg-opacity-30 backdrop-blur-5">
+        <div className="h-fit  md:col-span-3 lg:col-span-1 mt-2 pb-2 mx-2 rounded-md bg-black bg-opacity-30 backdrop-blur-5">
           <div class="">
             <div class="anisc-info-wrap">
               <div class="anisc-info">

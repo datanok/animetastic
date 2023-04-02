@@ -3,6 +3,8 @@ import axios from "axios";
 import { useState } from "react";
 import Results from "../Results";
 import Spinner from "../Spinner";
+import { useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
 export default function Search() {
   const API_URL = "https://api.jikan.moe/v4";
@@ -17,6 +19,14 @@ export default function Search() {
     nores: false,
     searchMsg: "",
   });
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const searchMsg = searchParams.get("id");
+    if (searchMsg) {
+      handleSearch(searchMsg);
+    }
+  }, [searchParams]);
 
   /* Param: SearchQuery : Input searched by user*/
   const handleSearch = async (searchQuery) => {
@@ -71,7 +81,7 @@ export default function Search() {
         <Spinner />
       ) : (
         <div className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 justify-items-center justify-center gap-y-14 gap-x-14 mt-10 mb-5 px-2">
-          <Results results={state.results} />
+          <Results results={state.results} searchMessage={state.searchMsg} />
         </div>
       )}
     </>

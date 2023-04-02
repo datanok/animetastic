@@ -1,7 +1,10 @@
 import { IconContext } from "react-icons";
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
-function Result({ result }) {
+function Result({ result, searchMessage }) {
+  const searchQuery = searchMessage;
+  console.log("result");
+  console.log(searchMessage);
   return (
     <>
       <div className="flex rounded-2xl max-w-[242px]">
@@ -12,7 +15,7 @@ function Result({ result }) {
             alt=""
           />
           <div
-            className="absolute bottom-0 left-0 right-0 w-full h-fit bg-black rounded-b-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10 border border-gray-100 border-b-0 text-white
+            className="absolute bottom-0 left-0 right-0 w-full h-fit bg-black rounded-b-2xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10 border-t border-gray-100 text-white
       "
           >
             <div className="flex pl-2 justify-between mr-2 pr-2">
@@ -31,7 +34,7 @@ function Result({ result }) {
               <span>TV</span>
             </div>
 
-            <Link to={"/search/" + result.mal_id} result={result}>
+            <Link to={`/search/${result.mal_id}?searchQuery=${searchQuery}`}>
               <h1 className="pl-3 my-2 text-md truncate ...">{result.title}</h1>
             </Link>
           </div>
