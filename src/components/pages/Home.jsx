@@ -1,10 +1,27 @@
+import AnimeCarousel from "../AnimeCarousel";
+import Ourpicks from "../Ourpicks";
+import TopAnime from "../TopAnime";
+
 export default function Home() {
   return (
-    <div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-        <div class="column-1 w-full h-full border-2 border-dashed  rounded-md"></div>
-        <div class="column-2 w-full  border-2 border-dashed   lg:my-0 rounded-md"></div>
-        <div class="column-3 w-full  border-2 border-dashed   lg:my-0 rounded-md"></div>
+    <div className="px-2">
+      <h1 className="m-4 text-white text-xl font-bold my-2 border-l-4 border-sky-300 pl-3">
+        Our Picks
+      </h1>
+      <Ourpicks />
+      <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-sky-300 to-transparent opacity-25 dark:opacity-100" />
+      <div className="mt-4 flex flex-col justify-center ml-4">
+        <h1 className="text-white text-xl font-bold my-2 border-l-4 border-sky-300 pl-3">
+          Current Season
+        </h1>
+        <AnimeCarousel />
+      </div>
+      <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-sky-300 to-transparent opacity-25 dark:opacity-100" />
+      <div className="mt-4 flex flex-col justify-center ml-4">
+        <h1 className="text-white text-xl font-bold my-2 border-l-4 border-sky-300 pl-3">
+          Most Popular
+        </h1>
+        <TopAnime />
       </div>
     </div>
   );
