@@ -8,12 +8,13 @@ export default function Footer() {
             class="flex items-center mb-4 sm:mb-0"
           >
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              class="h-8 mr-3"
-              alt="Flowbite Logo"
+              className="m4-3 h-8"
+              src="https://img.icons8.com/color/42/null/sharingan.png"
+              alt="logo"
             />
+
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+              Animetastic
             </span>
           </a>
           <ul class="flex flex-wrap justify-center gap-2 mb-6 text-sm font-medium text-gray-500 sm:mb-0 ">

@@ -11,7 +11,16 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between items-center py-2 max-w-[100%] mx-auto px-4 bg-slate-900 text-white border-b border-sky-300 lg:px-8 sticky top-0 z-10 lg:mx-0 ">
-      <h1 className="w-full text-2xl font-bold text-sky-400">AnimeTastic</h1>
+      <span className="flex gap-1">
+        <img
+          className=" h-8"
+          src="https://img.icons8.com/color/42/null/sharingan.png"
+          alt="logo"
+        />
+        <h1 className="w-full text-2xl  font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-700 to-sky-300">
+          AnimeTastic
+        </h1>
+      </span>
       <ul className="hidden md:flex">
         <li className="p-4 hover:text-sky-400">
           <Link to="/">Home</Link>
@@ -32,7 +41,7 @@ const Navbar = () => {
         }
       >
         <h1 className="w-full text-3xl font-bold text-[##421231] m-4">
-          REACT.
+          Animetastic
         </h1>
         <li className="p-4 hover:text-sky-400">
           <Link to="/">Home</Link>
