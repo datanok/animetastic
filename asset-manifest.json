@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/animetastic/static/css/main.7ac13093.css",
-    "main.js": "/animetastic/static/js/main.13da178c.js",
+    "main.css": "/animetastic/static/css/main.1b09b66c.css",
+    "main.js": "/animetastic/static/js/main.6a871ef5.js",
     "static/js/787.de845d41.chunk.js": "/animetastic/static/js/787.de845d41.chunk.js",
     "static/media/slick.svg": "/animetastic/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/animetastic/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/animetastic/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/animetastic/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/animetastic/index.html",
-    "main.7ac13093.css.map": "/animetastic/static/css/main.7ac13093.css.map",
-    "main.13da178c.js.map": "/animetastic/static/js/main.13da178c.js.map",
+    "main.1b09b66c.css.map": "/animetastic/static/css/main.1b09b66c.css.map",
+    "main.6a871ef5.js.map": "/animetastic/static/js/main.6a871ef5.js.map",
     "787.de845d41.chunk.js.map": "/animetastic/static/js/787.de845d41.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ac13093.css",
-    "static/js/main.13da178c.js"
+    "static/css/main.1b09b66c.css",
+    "static/js/main.6a871ef5.js"
   ]
 }
