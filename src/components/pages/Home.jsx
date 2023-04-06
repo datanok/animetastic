@@ -3,6 +3,7 @@ import Ourpicks from "../Ourpicks";
 import TopAnime from "../TopAnime";
 
 export default function Home() {
+  document.title = "Home";
   return (
     <div className="px-2">
       <h1 className="m-4 text-white text-xl font-bold my-2 border-l-4 border-sky-300 pl-3">

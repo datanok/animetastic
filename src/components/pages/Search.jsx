@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 
 export default function Search() {
+  document.title = "Search";
   const API_URL = "https://api.jikan.moe/v4";
   const [searched, setSearched] = useState(false);
   const [results, setResults] = useState([]);

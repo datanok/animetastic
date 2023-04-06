@@ -15,11 +15,6 @@ export default function Details() {
   const { id } = useParams();
   const [anime, setAnime] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  axios
-    .get("https://api.jikan.moe/v4/anime/" + id + "/pictures")
-    .then((res) => {
-      console.log(res);
-    });
 
   // function to fetch anime information from Jikan API
   const fetchAnime = async () => {
@@ -28,6 +23,7 @@ export default function Details() {
     try {
       const response = await axios.get(url);
       setAnime(response.data.data || {}); // set anime to empty object if response.data.data is falsy
+      document.title = anime.title;
       setIsLoading(false);
     } catch (error) {
       console.log(error);
@@ -45,8 +41,8 @@ export default function Details() {
   }
 
   return (
-    <div className="bg-hero bg-no-repeat bg-cover bg-center bg-fixed backdrop-blur-lg bg-white/30 bg-[url('https://images8.alphacoders.com/632/632051.png')]">
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-0 bg-black backdrop-filter backdrop-blur-xl bg-opacity-10 w-full">
+    <div className="bg-hero  min-h-screen bg-no-repeat bg-cover bg-center bg-fixed backdrop-blur-lg bg-white/30 bg-[url('https://images8.alphacoders.com/632/632051.png')]">
+      <div className="grid  min-h-screen grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-0 bg-black backdrop-filter backdrop-blur-xl bg-opacity-10 w-full">
         <button className="absolute text-white m-4" onClick={() => goBack()}>
           <BiArrowBack size={24} />
         </button>

@@ -1,3 +1,4 @@
+import logo from "../static/images/logo.png";
 export default function Footer() {
   return (
     <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
@@ -7,11 +8,7 @@ export default function Footer() {
             href="https://flowbite.com/"
             class="flex items-center mb-4 sm:mb-0"
           >
-            <img
-              className="m4-3 h-8"
-              src="https://img.icons8.com/color/42/null/sharingan.png"
-              alt="logo"
-            />
+            <img className="m4-3 h-8" src={logo} alt="logo" />
 
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Animetastic

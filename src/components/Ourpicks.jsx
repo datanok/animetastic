@@ -2,6 +2,10 @@ import { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import { Link } from "react-router-dom";
+import bleach from "../static/images/bleachthousand.jpg";
+import job from "../static/images/jobless.jpg";
+import howl from "../static/images/2126732.jpg";
+import cowboy from "../static/images/wallpaperflare.com_wallpaper.jpg";
 export default function Ourpicks() {
   const slides = [
     {
@@ -11,20 +15,26 @@ export default function Ourpicks() {
       link: "/search/40748",
     },
     {
-      url: "https://via.placeholder.com/2670x800?text=Slide%202",
-      text: "This is the second slide.",
+      url: bleach,
+      text: "Bleach: Thousand-Year Blood War.",
+      info: "The peace is suddenly broken when warning sirens blare through the Soul Society. Residents are disappearing without a trace and nobody knows who's behind it. Meanwhile, a darkness is approaching Ichigo and his friends in Karakura Town.",
     },
     {
-      url: "https://via.placeholder.com/2672x800?text=Slide%203",
-      text: "This is the third slide.",
+      url: job,
+      text: "Mushoku Tensei: Jobless Reincarnation",
+      info: "When a wayward man is reincarnated with the knowledge, experience, and regrets from his previous life, he resolves to become successful in his new body.",
     },
     {
-      url: "https://via.placeholder.com/2253x800?text=Slide%204",
-      text: "This is the fourth slide.",
+      url: howl,
+      text: "Howl's Moving Castle",
+      info: "When an unconfident young woman is cursed with an old body by a spiteful witch, her only chance of breaking the spell lies with a self-indulgent yet insecure young wizard and his companions in his legged, walking castle.",
+      link: "/search/431",
     },
     {
-      url: "https://via.placeholder.com/2671x800?text=Slide%205",
-      text: "This is the fifth slide.",
+      url: cowboy,
+      text: "Cowboy Bebop",
+      info: "Aboard the spaceship Bebop, a bounty hunter and his group of skilled comrades embark on adventures across the Solar System to capture criminals.",
+      link: "/search/1",
     },
   ];
 
@@ -47,29 +57,33 @@ export default function Ourpicks() {
   };
 
   return (
-    <div className="h-[300px] w-full m-auto mt-4 px-4 relative group">
+    <div className="h-[365px] w-full m-auto mt-4px-4 relative group">
       <div
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
+        style={{
+          backgroundImage: `url(${slides[currentIndex].url})`,
+        }}
+        className="w-full rounded-2xl overflow-clip h-full bg-center bg-cover duration-500"
       >
-        <div className="flex w-[100%] flex-col justify-end md:justify-center h-full pl-4 bg-gradient-to-r from-black to:transparent">
-          <h1 className="sm:text-lg  md:text-3xl font-bold text-white">
-            {slides[currentIndex].text}
-          </h1>
-          <p className="w-full sm:block md:w-[30%] text-sm text-ellipsis mt-3 text-gray-300">
-            {slides[currentIndex].info}
-          </p>
+        <div className="w-[100%] h-full  pl-4 bg-gradient-to-r from-black to:transparent">
+          <div className="flex w-[100%] flex-col justify-start md:ml-4 md:justify-center h-full pl-4">
+            <h1 className="sm:text-lg  md:text-3xl font-bold text-white text-center md:text-start">
+              {slides[currentIndex].text}
+            </h1>
+            <p className="w-full sm:block md:w-[30%] text-sm text-ellipsis mt-3 lg:text-lg text-gray-300">
+              {slides[currentIndex].info}
+            </p>
 
-          <Link
-            to={slides[currentIndex].link}
-            className="text-xs mb-2 text-white hover:bg-white hover:text-black hover:font-bold border w-fit px-2 py-1 mt-3 rounded-full sm:text-xs"
-          >
-            More Info
-          </Link>
+            <Link
+              to={slides[currentIndex].link}
+              className="text-xs mb-2 text-white hover:bg-white hover:text-black hover:font-bold border w-fit px-2 py-1 mt-3 rounded-full sm:text-xs"
+            >
+              More Info
+            </Link>
+          </div>
         </div>
       </div>
       {/* Left Arrow */}
-      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-1 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>
       {/* Right Arrow */}
