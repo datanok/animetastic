@@ -1,19 +1,25 @@
 import logo from "../static/images/logo.png";
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
       <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
-          <a
-            href="https://flowbite.com/"
-            class="flex items-center mb-4 sm:mb-0"
-          >
-            <img className="m4-3 h-8" src={logo} alt="logo" />
-
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Animetastic
-            </span>
-          </a>
+        <div class="sm:flex sm:items-center sm:justify-between ">
+          <span className="flex gap-1">
+            <Link to="/">
+              <img
+                className=" h-8 hover:rotate-180 transition duration-500"
+                src={logo}
+                alt="logo"
+              />
+            </Link>
+            <Link to="/">
+              {" "}
+              <h1 className="w-full text-2xl  font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-700 to-sky-300">
+                AnimeTastic
+              </h1>
+            </Link>
+          </span>
           <ul class="flex flex-wrap justify-center gap-2 mb-6 text-sm font-medium text-gray-500 sm:mb-0 ">
             <a
               href="https://twitter.com/tanmay_P_"

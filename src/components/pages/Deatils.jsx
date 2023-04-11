@@ -9,9 +9,13 @@ export default function Details() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get("searchQuery");
+  console.log(searchQuery);
+  const navString = searchQuery ? `/search?id=${searchQuery}` : "/";
+  console.log(navString);
   const goBack = () => {
-    navigate(`/search?id=${searchQuery}`);
+    navigate(`${navString}`);
   };
+
   const { id } = useParams();
   const [anime, setAnime] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -23,7 +27,7 @@ export default function Details() {
     try {
       const response = await axios.get(url);
       setAnime(response.data.data || {}); // set anime to empty object if response.data.data is falsy
-      document.title = anime.title;
+      document.title = response.data.data.title;
       setIsLoading(false);
     } catch (error) {
       console.log(error);
@@ -46,7 +50,7 @@ export default function Details() {
         <button className="absolute text-white m-4" onClick={() => goBack()}>
           <BiArrowBack size={24} />
         </button>
-        <div className=" h-fit my-2 md:col-span-1 mx-auto">
+        <div className="h-fit my-2 md:col-span-1 mx-auto mt-5">
           <img
             src={anime?.images.jpg.large_image_url}
             className="h-[300px]"

@@ -31,12 +31,11 @@ const TopAnime = () => {
 
   const settings = {
     dots: false,
-    infinite: false,
-    speed: 1000,
+    infinite: true,
+    autoplaySpeed: 5000,
     slidesToShow: 6,
     slidesToScroll: 1,
-
-    autoplay: false,
+    autoplay: true,
     cssEase: "linear",
     responsive: [
       {
@@ -69,13 +68,13 @@ const TopAnime = () => {
         {animeData.map((anime) => (
           <div className="flex rounded-2xl w-[250px] h-50 px-2">
             <div className="relative">
-              <img
-                className="rounded-3xl object-cover h-full"
-                src={anime.images.jpg.large_image_url}
-                alt=""
-              />
-
               <Link to={"/search/" + anime.mal_id} anime={anime}>
+                <img
+                  className="rounded-3xl object-cover h-full"
+                  src={anime.images.jpg.large_image_url}
+                  alt=""
+                />
+
                 <h1 className="pl-3 hover:text-sky-300 text-white my-1 text-md truncate ...">
                   {anime.title}
                 </h1>

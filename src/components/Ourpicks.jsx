@@ -65,7 +65,7 @@ export default function Ourpicks() {
         className="w-full rounded-2xl overflow-clip h-full bg-center bg-cover duration-500"
       >
         <div className="w-[100%] h-full  pl-4 bg-gradient-to-r from-black to:transparent">
-          <div className="flex w-[100%] flex-col justify-start md:ml-4 md:justify-center h-full pl-4">
+          <div className="flex w-[100%] flex-col justify-end lg:justify-center md:ml-4 md:justify-center h-full pl-4">
             <h1 className="sm:text-lg  md:text-3xl font-bold text-white text-center md:text-start">
               {slides[currentIndex].text}
             </h1>
