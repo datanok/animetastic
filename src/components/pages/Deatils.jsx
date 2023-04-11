@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
 
@@ -96,7 +96,7 @@ export default function Details() {
                     Japanese:
                   </span>
                   <span class="text-sm text-white ml-2">
-                    {anime.title_japanese}
+                    {anime?.title_japanese}
                   </span>
                 </div>
                 <div class="py-1">
@@ -134,14 +134,17 @@ export default function Details() {
                   <span class="text-sm text-white ml-2">{anime.score}</span>
                 </div>
 
-                <div class="item item-list">
+                <div class="item item-list flex flex-wrap">
                   <span class="text-sm text-white ml-2 font-semibold">
                     Genres:
                   </span>
                   {anime.genres.map((genre) => (
-                    <button className=" text-sm ml-2 text-white border border-white hover:border-transparent hover:bg-white hover:text-black  rounded-full px-2 py-1">
+                    <Link
+                      to={`/genre/${genre.name}`}
+                      className=" text-sm ml-2 text-white border border-white hover:border-transparent hover:bg-white hover:text-black  rounded-full px-2 py-1"
+                    >
                       {genre.name}
-                    </button>
+                    </Link>
                   ))}
                 </div>
 

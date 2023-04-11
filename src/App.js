@@ -6,6 +6,7 @@ import Details from "./components/pages/Deatils";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Categories from "./components/pages/Categories";
+import Genre from "./components/pages/Genre";
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
             <Route path="/search" element={<Search />}></Route>
             <Route path="/search/:id" element={<Details />} />
             <Route path="/categories" element={<Categories />} />
+            <Route path="/genre/:genre" element={<Genre />} />
           </Routes>
         </main>
         <Footer />
