@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Categories from "./components/pages/Categories";
 import Genre from "./components/pages/Genre";
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
 
       <div class="flex flex-col min-h-screen">
         <main class="flex-grow">
+          <ScrollToTop>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/animetastic" element={<Home />} />
@@ -22,6 +24,7 @@ function App() {
             <Route path="/categories" element={<Categories />} />
             <Route path="/genre/:genre" element={<Genre />} />
           </Routes>
+          </ScrollToTop>
         </main>
         <Footer />
       </div>

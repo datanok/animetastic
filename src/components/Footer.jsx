@@ -2,7 +2,7 @@ import logo from "../static/images/logo.png";
 import { Link } from "react-router-dom";
 export default function Footer() {
   return (
-    <footer class=" rounded-lg shadow dark:bg-gray-900 m-4">
+    <footer class=" shadow dark:bg-gray-900 m-4 border-t-2  border-sky-300">
       <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between ">
           <span className="flex gap-1">
@@ -89,7 +89,7 @@ export default function Footer() {
             </a>
           </ul>
         </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+     
         <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
           Created By Tanmay
         </span>
